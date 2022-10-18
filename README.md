@@ -76,13 +76,13 @@ contains arguments types used for _printf.
 
 ### utils.c
 contains some necessary functionalities for _printf.
-```
+
 
 ------------
 
 ### write_handlers.c
 contains write functions.
-```
+
 
 ------------
 
