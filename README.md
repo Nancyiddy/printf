@@ -3,7 +3,7 @@ The printf project is a collaboration between Fortunatus Felix and Nancy Idiong,
 
 _printf() is a function that performs formatted output conversion and print data. 
 
-Integer
+Integer.
 
 Input: _printf("There are %i dozens in a gross\n", 12);
 Output: There are 12 dozens in a gross
