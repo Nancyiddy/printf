@@ -43,15 +43,11 @@ all function have its own description inside the file.
 
 ### get_flags.c
 contains all function for each flag use for _printf.
-```
 
 ------------
 
 ### get_precision.c
 Function That Writes The String To Stdout.
-```c
-/* Indetifier : %s */
-```
 
 ------------
 
