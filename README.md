@@ -3,10 +3,29 @@ The printf project is a collaboration between Fortunatus Felix and Nancy Idiong,
 
 _printf() is a function that performs formatted output conversion and print data. 
 
-## File Functions
+Integer
+
+Input: _printf("There are %i dozens in a gross\n", 12);
+Output: There are 12 dozens in a gross
+Character
+
+Input: _printf("The first letter in the alphabet is %c\n", 'A');
+Output: The first letter in the alphabet is A
+String
+
+Input: _printf("%s\n", 'This is a string.');
+Output: This is a string.
+Decimal:
+
+Input: _printf("%d\n", 1000);
+Output: 1000
+
+## File Description 
+
 
 ### _printf.c
-Own Printf Function Tha Performs Formatted Output Conversion And Print Data.
+
+contains the fucntion _printf, which uses the prototype int _printf(const char *format, ...);. The format string is composed of zero or more directives. See man 3 printf for more detail. _printf will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to stdout, the standard output stream.
 
 ------------
 
@@ -15,30 +34,20 @@ Header File Were All Prototypes Are Saved.
 
 ------------
 
-### get_print_func.c
-Pointer To A Function That Selects The Correct Function To Perform The Operation.
+### functions.c functions1.c functions2.c
+
+contains all function of each specifier used for _printf.
+all function have its own description inside the file.
 
 ------------
 
-### print_buf.c
-Function That Prints The Buffer.
-
-------------
-
-### handl_buf.c
-Function That Concatenates The Buffer Characters.
-
-------------
-
-### print_chr.c
-Function That Writes The Character C To Stdout.
-```c
-/* Indetifier : %c */
+### get_flags.c
+contains all function for each flag use for _printf.
 ```
 
 ------------
 
-### print_str.c
+### get_precision.c
 Function That Writes The String To Stdout.
 ```c
 /* Indetifier : %s */
@@ -46,208 +55,34 @@ Function That Writes The String To Stdout.
 
 ------------
 
-### print_int.c
-Function That Prints An Integer.
-```c
-/* Indetifier : %i or %d */
+### get_size.c
+Function That Prints:
+Decimal In Uppercase Hexadecimal /* Indetifier : %X */
+An Unsigned Integer /* Indetifier : %u */
+Decimal In Octal /* Indetifier : %o */. 
+Decimal In Hexadecimal /* Indetifier : %x */
+
+------------
+
+### get_width.c
+contains functions to get width for spcifics spcifiers.
+
+------------
+
+### handle_print.c
+contains arguments types used for _printf.
+
+------------
+
+### utils.c
+contains some necessary functionalities for _printf.
 ```
 
 ------------
 
-### print_bnr.c
-Function That Prints Decimal In Binary.
-```c
-/* Indetifier : %b */
+### write_handlers.c
+contains write functions.
 ```
-
-------------
-
-### print_oct.c
-Function That Prints Decimal In Octal.
-```c
-/* Indetifier : %o */
-```
-
-------------
-
-### print_hex.c
-Function That Prints Decimal In Hexadecimal.
-```c
-/* Indetifier : %x */
-```
-
-------------
-
-### print_upx.c
-Function That Prints Decimal In Uppercase Hexadecimal.
-```c
-/* Indetifier : %X */
-```
-
-------------
-
-### print_usr.c
-Function That Prints A String And Values Of Non-Printed Chars.
-```c
-/* Indetifier : %S */
-```
-
-------------
-
-### print_unt.c
-Function That Prints An Unsigned Integer.
-```c
-/* Indetifier : %u */
-```
-
-------------
-
-### print_rev.c
-Function That Writes The String To Stdout In Reverse.
-```c
-/* Indetifier : %r */
-```
-
-------------
-
-### print_rot.c
-Function That Writes The String To Stdout In Rot13.
-```c
-/* Indetifier : %R */
-```
-
-------------
-
-### print_add.c
-Function That Prints The Address Of An Input Variable.
-```c
-/* Indetifier : %p */
-```
-
-------------
-
-### print_long_oct.c
-Function That Prints Long Decimal Number In Octal.
-```c
-/* Indetifier : %lo */
-```
-
-------------
-
-### print_long_hex.c
-Function That Prints Long Decimal Number In Hexadecimal.
-```c
-/* Indetifier : %lx */
-```
-
-------------
-
-### print_long_int.c
-Function That Prints  A Long Integer.
-```c
-/* Indetifier : %li */
-```
-
-------------
-
-### print_long_upx.c
-Function That Prints A Long Decimal In Uppercase Hexadecimal.
-```c
-/* Indetifier : %lX */
-```
-
-------------
-
-### print_long_unt.c
-Function That Prints A Long Unsigned Integer.
-```c
-/* Indetifier : %lu */
-```
-
-------------
-
-### print_short_oct.c
-Function That Prints Short Decimal Number In Octal.
-```c
-/* Indetifier : %ho */
-```
-
-------------
-
-### print_short_hex.c
-Function That Prints Short Decimal Number In Hexadecimal.
-```c
-/* Indetifier : %hx */
-```
-
-------------
-
-### print_short_int.c
-Function That Prints  A Short Integer.
-```c
-/* Indetifier : %hi */
-```
-
-------------
-
-### print_short_upx.c
-Function That Prints A Short Decimal In Uppercase Hexadecimal.
-```c
-/* Indetifier : %hX */
-```
-
-------------
-
-### print_short_unt.c
-Function That Prints A Short Unsigned Integer.
-```c
-/* Indetifier : %hu */
-```
-
-------------
-
-### print_num_hex.c
-Function That Print A Number In Hexadecimal Begining With 0 And x.
-```c
-/* Indetifier : %#x */
-```
-
-------------
-
-### print_num_oct.c
-Function That Prints A Number In Octal Begining With 0 And o.
-```c
-/* Indetifier : %#o */
-```
-
-------------
-
-### print_num_upx.c
-Function That Prints A Number In Uppercase Hexadecimal.
-```c
-/* Indetifier : %#X */
-```
-
-------------
-
-### print_plus_int.c
-Function That Prints An Integer With Plus Symbol.
-```c
-/* Indetifier : %+i */
-```
-
-------------
-
-### print_space_int.c
-Function That Prints An Integer Begining With 0 And u.
-```c
-/* Indetifier : % i */
-```
-
-------------
-
-### ev_print_func.c
-Function That Returns The Amount Of Indetifiers.
 
 ------------
 
